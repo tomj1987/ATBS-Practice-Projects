@@ -12,23 +12,3 @@ passed to it. Be sure to test the case where an empty list [] is passed to your 
 
 
 
-
-names = ['thomas', 'hunter', 'frankie']
-
-
-def comma(my_list):
-    output = ''
-    if len(my_list) == 0:
-        print('Not a valid list.')  # Returns an error statement if an empty ist is entered.
-    for x in range(len(my_list)):
-        if len(my_list) - 1 == x:
-            output += f"and {my_list[x]}."  # Find last item in the list and puts 'and' before it.
-        elif len(my_list) - 2 == x:
-            output += f"{my_list[x]} "  # Second from last item in the list is followed by 'and', so no comma.
-        else:
-            output += f"{my_list[x]}, "  # All other items in the list are separated by commas.
-    return output
-
-
-result = comma(names)
-print(result)
